@@ -17,6 +17,11 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "GoogleConversionTracking",
-            publicHeadersPath: "Sources"),
+            path: "GoogleConversionTracking",
+            resources: [.process("")],
+            publicHeadersPath: "",
+            cSettings: [.headerSearchPath(""),
+                        .headerSearchPath("Deprecated"),
+                        .headerSearchPath("DoubleClick")]),
     ]
 )
